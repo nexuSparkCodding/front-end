@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  background:#c89116;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:root{
+    --primary: #ffffff;
+}
+
+.animation-group {
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.input_username {
+  all: unset;
+  color: #fefefe;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label_username {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #d4d4d4;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input_username:focus {
+  border: 1px solid var(--primary);
+}
+
+.input_username:is(:focus, :valid) ~ label {
+  transform: translateY(-120%) scale(0.7);
+  background-color: #c89116;
+  padding-inline: 0.3rem;
+  color: var(--primary);
+}
