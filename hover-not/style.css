@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
     background: radial-gradient(#00000081,#1200d4);
     height: 100vh;
