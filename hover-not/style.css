@@ -1,0 +1,29 @@
+body{
+    background: radial-gradient(#00000081,#1200d4);
+    height: 100vh;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 35vh;
+}
+
+.box{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5%;
+    width: 10vw;
+    height: 20vh;
+    opacity: 1;
+}
+
+.hover-divs:hover> :not(:hover){
+    transition: opacity 0.6s ease;
+    opacity: 0.1;
+}
+
+.box:hover{
+    transform: scale(1.2);
+    transition: transform 0.6s ease;
+}
