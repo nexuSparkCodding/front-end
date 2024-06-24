@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+@media (min-width: 701px){
+    *,
+    *::after
+    *::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: linear-gradient(to left, #64a8d0,#003253);
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    
+    }
+
+    .nav-bar {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0.6rem 0rem; /* Yatayda biraz boşluk ekleyin */
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        justify-content: space-between; /* Öğeleri yatayda eşit aralıklarla dağıtın */
+        align-items: center; /* Dikey hizalamayı merkezde tutun */
+    }
+
+    .burger-menu{
+        display: none;
+    }
+
+    .main-nav{
+        display: flex;
+        position: absolute;
+        left: 15%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+
+    .list, .list-sign {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 2rem; /* Öğeler arasında boşluk ekleyin */
+    }
+
+    .list-sign{
+        margin-right: 2%;
+    }
+
+    .list{
+        margin-left: 5%;
+    }
+
+    .list_eleman{
+        text-decoration: none;
+        color: #fff;
+
+    }
+    .signinup_element{
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 7px;
+        padding: 10px;
+    }
+    .signinup_element:hover{
+        background-color: #fff;
+        color: #007acb;
+    }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 700px) {
+    *,
+    *::after
+    *::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        background: linear-gradient(to left, #64a8d0,#003253);
+        font-family: "Audiowide", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    
+    }
+
+    .nav-bar {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        width: 100%;
+        flex-direction: row;
+        padding: 0.6rem 0rem; /* Yatayda biraz boşluk ekleyin */
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        justify-content: space-between; /* Öğeleri yatayda eşit aralıklarla dağıtın */
+        align-items: center; /* Dikey hizalamayı merkezde tutun */
+    }
+
+    .list, .list-sign {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        text-align: right;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        gap: 2rem; /* Öğeler arasında boşluk ekleyin */
+    }
+    
+    .list-sign{
+        flex-direction: row;
+        margin-top: 65vh;
+
+    }
+
+    .list_eleman{
+        text-decoration: none;
+        color: #003253
+
+    }
+    .signinup_element{
+        text-decoration: none;
+        color: #003253;
+        border: 1px solid #003253;
+        border-radius: 7px;
+        padding: 10px;
+    }
+    .signinup_element:hover{
+        background-color: #003253;
+        color: #fff;
+    }
+    
+    /*Burger menu*/
+    .burger-menu {
+        display: block;
+        position: relative;
+        margin-right: 1.4rem;
+        width: 30px;
+        height: 20px;
+        transition: 0.3s ease;
+    }
+
+    .burger-menu::before,
+    .burger-menu::after {
+        content: ''; /* boş içerik*/
+        background: #fff; /* burger menumuzun rengi */
+        position: absolute; /* burger menumuzun konumlandırma değeri */
+        width: 100%;
+        height: 2px; /* Burger menumuzun çizgileri */
+        transition: 0.3s ease;
+    }
+
+    .burger-menu::before {
+        top: 0; /* üst burger "ekmeğinin" konumu */
+    }
+
+    .burger-menu span { /* "köfteyi" span elemanı ile çizeceğiz */
+        background: #fff;
+        position: absolute; 
+        width: 100%;
+        top: 9px;
+        height: 2px; 
+    }
+    .burger-menu::after {
+        bottom: 0; /* alttaki burger "ekmeğinin" konumu */
+    }
+
+
+    /*Menu*/
+    .main-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.488);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+        padding: 20px 10px;
+        transform: translateX(100%);
+    }
+
+    .list {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .burger-menu.active {
+        z-index: 3;
+        transform: translateX(-40vw);
+        transition: 0.3s ease;
+    }
+
+    .burger-menu.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: 0.3s ease;
+    }
+    .burger-menu.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: 0.3s ease;
+    }
+
+    .burger-menu.active span {
+        transform: scale(0);
+    }
+
+    .main-nav.active {
+       transform: translate(0);
+       transition: 0.3s ease;
+    }
+
+
+}
